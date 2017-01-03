@@ -34,8 +34,8 @@ services:
      
  web-search-admin:
    build :
-     context : c:\Appleseed\search\search-stack\docker\elastic\windows\
-     dockerfile: Dockerfile-ItemsAPI
+     context : c:\Appleseed\search\search-stack\docker\itemsapi\windows\
+    
 
 networks:
     default:
