@@ -11,14 +11,8 @@ If you are using Windows 2016 Server, the OS now has Docker built-in (but you ma
 
 ### Windows Docker Appleseed Core-Stack Composure
 - `md c:\Appleseed`
-- `md c:\Appleseed\core`
-- `md c:\Appleseed\search`
-- `md c:\Appleseed\portal`
-- `cd c:\Appleseed\portal`
 - `git clone https://github.com/Appleseed/portal-stack.git`
-- `cd c:\Appleseed\search`
 - `git clone https://github.com/Appleseed/search-stack.git`
-- `cd c:\Appleseed\core`
 - `git clone https://github.com/Appleseed/core-stack.git`
 - `cd .\core-stack\docker\windows\`
 - `docker-compose -p core-stack up -d`
