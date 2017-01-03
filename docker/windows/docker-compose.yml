@@ -3,7 +3,7 @@ version: '2.1'
 services:
   db-mssql-express-2016:
     build:
-     context: c:\Appleseed\portal\portal-stack\docker\db\mssql\
+     context: c:\Appleseed\portal-stack\docker\db\mssql\
     environment:
       sa_password: "Password1"
       ACCEPT_EULA: Y
@@ -13,7 +13,7 @@ services:
 
   web-appleseed-portal:
     build:
-      context: c:\Appleseed\portal\portal-stack\docker\portal\windows\
+      context: c:\Appleseed\portal-stack\docker\portal\windows\
     
     depends_on:
       - "db-mssql-express-2016"
@@ -26,15 +26,15 @@ services:
  
   appleseed-base-engine:
    build:
-     context : c:\Appleseed\search\search-stack\docker\engine\windows\
+     context : c:\Appleseed\search-stack\docker\engine\windows\
      
   search-index-solr:
    build :
-     context : c:\Appleseed\search\search-stack\docker\solr\windows\
+     context : c:\Appleseed\search-stack\docker\solr\windows\
      
   web-search-admin:
    build :
-     context : c:\Appleseed\search\search-stack\docker\itemsapi\windows\
+     context : c:\Appleseed\search-stack\docker\itemsapi\windows\
     
 
 networks:
