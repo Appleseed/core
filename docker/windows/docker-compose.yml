@@ -24,15 +24,15 @@ services:
     ports:
       - "80:80"
  
- appleseed-base-engine:
+  appleseed-base-engine:
    build:
      context : c:\Appleseed\search\search-stack\docker\engine\windows\
      
- search-index-solr:
+  search-index-solr:
    build :
      context : c:\Appleseed\search\search-stack\docker\solr\windows\
      
- web-search-admin:
+  web-search-admin:
    build :
      context : c:\Appleseed\search\search-stack\docker\itemsapi\windows\
     
