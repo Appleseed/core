@@ -1,0 +1,32 @@
+# Appleseed Core Stack Azure Enterprise Composure
+version: '2.1'
+services:
+
+  web-appleseed-portal:
+    build:
+      context: c:\Appleseed\portal-stack\docker\portal\windows\
+   
+    #Port 80 is exposed on the container and host.  Admins can modify this in their own version. 
+    ports:
+      - "80:80"
+ 
+  appleseed-base-engine:
+   build:
+     context : c:\Appleseed\search-stack\docker\engine\windows\
+     
+  search-index-solr:
+   build :
+     context : c:\Appleseed\search-stack\docker\solr\windows\
+   #To-do : Expose port 81 for IIS AAR Passthrough security.  However if 8983 is blocked form outside should be good
+   ports:
+      - "8983:8983"
+     
+  web-search-admin:
+   build :
+     context : c:\Appleseed\search-stack\docker\itemsapi\windows\
+    
+
+networks:
+    default:
+       external:
+           name: nat
