@@ -16,7 +16,7 @@ If you are using Windows 2016 Server, the OS now has Docker built-in (but you ma
 - `git clone https://github.com/Appleseed/core-stack.git`
 - `cd .\core-stack\docker\windows\`
 - `docker-compose -p core-stack up -d`
-- `docker ps - a`
+- `docker ps -a`
 
 
 
