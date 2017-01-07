@@ -21,9 +21,12 @@ services:
    ports:
       - "8983:8983"
      
-  web-search-admin:
+  search-index-elastic:
    build :
-     context : c:\Appleseed\search-stack\docker\itemsapi\windows\
+     context : c:\Appleseed\search-stack\docker\elastic\windows\nanoserver
+   ports:
+     - "9200:9200" 
+     - "9300:9300
     
 
 networks:
