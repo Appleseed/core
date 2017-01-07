@@ -16,7 +16,7 @@ services:
      
   search-index-solr:
    build :
-     context : c:\Appleseed\search-stack\docker\solr\windows\
+     context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver
    #To-do : Expose port 81 for IIS AAR Passthrough security.  However if 8983 is blocked form outside should be good
    ports:
       - "8983:8983"
