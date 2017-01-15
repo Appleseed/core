@@ -10,7 +10,7 @@ services:
     ports:
       - "80:80"
    
-  search-index-solr:
+  search-index-solr-base:
    build :
      context : c:\Appleseed\search-stack\docker\solr\windows\int.engine\
     #using the solr integrated with engine container
