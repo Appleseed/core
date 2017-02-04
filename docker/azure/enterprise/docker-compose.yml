@@ -24,7 +24,7 @@ services:
      
   search-index-solr:
     build :
-     context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver\
+     context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver\latest
    
     ports:
       - "8983:8983"
@@ -35,7 +35,7 @@ services:
      
    #  ports:
    #  - "9200:9200" 
-   #  - "9300:9300"
+   #  - "9300:9300"a
      
     
 
