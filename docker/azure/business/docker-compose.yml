@@ -1,4 +1,5 @@
 # Appleseed Core Stack Azure Business Composure
+# Light composure with an integrated solr and engine container.  Good for small business
 version: '2.1'
 services:
 
@@ -17,12 +18,12 @@ services:
    ports:
       - "8983:8983"
      
-  search-index-elastic:
-   build :
-     context : c:\Appleseed\search-stack\docker\elastic\windows\nanoserver\
-   ports:
-     - "9200:9200" 
-     - "9300:9300"
+  db-nosql-cassandra:
+    build :
+     context : c:\Appleseed\search-stack\docker\cassandra\windows\
+    #Grap Random internal port for now for security
+    #ports:
+    # - "7000" 
     
 
 networks:
