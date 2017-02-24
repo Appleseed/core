@@ -1,4 +1,7 @@
 # Appleseed Core Stack Windows Composure
+# Assumes the client needs a MSSQL Server Instance
+# If you do not need a MSSQL Server instance for data storage, please comment that section out or use the Azure setups
+
 version: '2.1'
 services:
   db-mssql-express-2016:
@@ -30,17 +33,18 @@ services:
      
   search-index-solr:
    build :
-     context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver
+     context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver\latest\
    #To-do : Expose port 81 for IIS AAR Passthrough security.  However if 8983 is blocked form outside should be good
    ports:
       - "8983:8983"
+   
+   db-nosql-cassandra:
+    build :
+     context : c:\Appleseed\search-stack\docker\cassandra\windows\
+    #Grap Random internal port for now for security
+    #ports:
+    # - "7000" 
      
-  search-index-elastic:
-   build :
-     context : c:\Appleseed\search-stack\docker\elastic\windows\nanoserver
-   ports:
-      - "9200:9200" 
-      - "9300:9300" 
 
 networks:
     default:
