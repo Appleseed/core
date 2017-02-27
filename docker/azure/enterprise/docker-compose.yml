@@ -18,16 +18,16 @@ services:
   db-nosql-cassandra:
     build :
      context : c:\Appleseed\search-stack\docker\cassandra\windows\
-    #Grap Random internal port for now for security
-    #ports:
-    # - "7000" 
+    
+    ports:
+     - "7000:7000" 
      
   search-index-solr:
     build :
      context : c:\Appleseed\search-stack\docker\solr\windows\nanoserver\latest
-    #Grap Random internal port for now for security
-    #ports:
-     # - "8983"
+    
+    ports:
+       - "8983:8983"
         
 networks:
     default:
