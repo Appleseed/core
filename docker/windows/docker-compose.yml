@@ -38,11 +38,11 @@ services:
    ports:
       - "8983:8983"
    
-   db-nosql-cassandra:
-    build :
+  db-nosql-cassandra:
+   build :
      context : c:\Appleseed\search-stack\docker\cassandra\windows\
     #Expose port.  Block by firewall
-     ports:
+   ports:
       - "7000:7000" 
      
 
