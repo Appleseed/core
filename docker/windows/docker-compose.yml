@@ -41,9 +41,9 @@ services:
    db-nosql-cassandra:
     build :
      context : c:\Appleseed\search-stack\docker\cassandra\windows\
-    #Grap Random internal port for now for security
-    #ports:
-    # - "7000" 
+    #Expose port.  Block by firewall
+     ports:
+      - "7000:7000" 
      
 
 networks:
