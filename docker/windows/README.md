@@ -1,7 +1,7 @@
 # Appleseed/core-stack on Docker Windows
 This is a Docker containerized stack for the Appleseed Core Framework on Docker using Windows
 
-##Quickstart:##
+## Quickstart:
 
 Configure and Install docker and docker-compose on your machine or server. Please note that by default this stack installs to port 80 of your site. This may be configured in either the compose file or docker run command to bring up internally. If brought up internally, firewall settings will have to be adjusted to the internal port assigned. You may need to stop other docker containers before going getting this stack up, to do so use the following command in powershell `docker kill $(docker ps -q)`. 
 
